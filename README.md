@@ -6,6 +6,6 @@
 
 #### Kasulikud lehed! :D
 
-####### http://pixijs.download/dev/docs/index.html
-####### https://github.com/kittykatattack/learningPixi
-####### https://www.awwwards.com/a-gentle-introduction-to-shaders-with-pixi-js.html
+###### http://pixijs.download/dev/docs/index.html
+###### https://github.com/kittykatattack/learningPixi
+###### https://www.awwwards.com/a-gentle-introduction-to-shaders-with-pixi-js.html
