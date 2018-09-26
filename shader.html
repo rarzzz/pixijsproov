@@ -1,0 +1,59 @@
+<html>
+   <head>
+      <title>Shaders</title>
+   </head>
+   <body>
+      <script type="text/javascript" src="pixi/pixi.js"></script>
+
+    
+      <script id="shader" type="shader">
+            void main() {
+                gl_FragColor = vec4(1.0,1.0,1.0,1.0);
+            }
+      </script>
+
+      <script> 
+
+
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var renderer = new PIXI.autoDetectRenderer(width, height);
+        document.body.appendChild(renderer.view);
+        var stage = new PIXI.Container();
+        
+        var dog = PIXI.Sprite.fromImage("images/dog.png");
+        dog.x = width / 2;
+        dog.y = height / 2;
+        dog.anchor.set(0.5, 0.5);
+        stage.addChild(dog);
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            renderer.render(stage);
+
+            dog.rotation += 0.1;
+
+        }
+
+        
+
+        var shaderCode = document.getElementById("shader").innerHTML
+
+        var simpleShader = new PIXI.Filter('' ,shaderCode);
+
+        dog.filters = [simpleShader];
+
+        animate();
+
+    </script>
+
+
+
+    
+
+
+    
+   </body>
+</html>

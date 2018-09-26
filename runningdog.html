@@ -40,7 +40,9 @@
       dog.y = 100;
       dog.vx = 10;
       dog.vy = 10;
-
+      dog.anchor.set(0.5,0.5);
+      dog.skewX = 100;
+      dog.skewY = -100;
       app.stage.addChild(dog);
       state = play;
       app.ticker.add(delta => gameLoop(delta));
@@ -53,16 +55,33 @@
 
     function play(delta) {
 
+      app.stage.addChild(dog);
+      
+      var varv = '0x'+ Math.floor(Math.random()*16777215).toString(16);
+
       if (dog.x > window.innerWidth - 100) {
         dog.vx = -10;
         dog.scale.x = 1;
+        dog.tint = varv;
       }
       
       else if (dog.x < 20) {
         dog.vx = 10;
         dog.scale.x = -1;
+        dog.tint = varv;
+      }
+
+      else if (dog.y > window.innerHeight - 100) {
+        dog.vy = -10;
+        dog.tint = varv;
+      }
+
+      else if (dog.y < 20) {
+        dog.vy = 10;
+        dog.tint = varv;
       }
       dog.x += dog.vx;
+      dog.y += dog.vy;
 
     }
 
