@@ -38,8 +38,8 @@
     
       dog.x = 100;
       dog.y = 100;
-      dog.vx = 4;
-      dog.vy = 4;
+      dog.vx = 10;
+      dog.vy = 10;
 
       app.stage.addChild(dog);
       state = play;
@@ -53,13 +53,13 @@
 
     function play(delta) {
 
-      if (dog.x > 200) {
-        dog.vx = -4;
+      if (dog.x > window.innerWidth - 100) {
+        dog.vx = -10;
         dog.scale.x = 1;
       }
       
-      else if (dog.x < 10) {
-        dog.vx = 4;
+      else if (dog.x < 20) {
+        dog.vx = 10;
         dog.scale.x = -1;
       }
       dog.x += dog.vx;
