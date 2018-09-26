@@ -1,6 +1,6 @@
 # Ma proovin pixijs
 
-### Donatege et ma saaks osta klaviatuuri
+### Donatege et ma saaks osta uue hiire
 
 ### Ahja sul xampp-i vaja selle jaoks =D
 
